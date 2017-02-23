@@ -1,6 +1,7 @@
 var keys = document.querySelectorAll('#calculator span');
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
+var jokeHa = "Cant calculate this";
 
 for (var i = 0; i < keys.length; i++) {
 	keys[i].onclick = function(e) {
@@ -25,8 +26,12 @@ for (var i = 0; i < keys.length; i++) {
 			if (equation) {
 				if (equation == '0.2+0.1' || equation == '0.1+0.2') {
 					input.innerHTML = eval((0.2 * 10 + 0.1 * 10) / 10);
-				} else {
-				input.innerHTML = eval(equation);
+				} 
+				else if (equation == '0.6+0.3' || equation == '0.3+0.6') {
+					input.innerHTML = eval((0.6 * 10 + 0.3 * 10) / 10);
+				}
+				else {
+					input.innerHTML = eval(equation);
 			    }
 			}
 
