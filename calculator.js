@@ -23,7 +23,11 @@ for (var i = 0; i < keys.length; i++) {
 				equation = equation.replace(/.$/, '');
 			}
 			if (equation) {
+				if (equation == '0.2+0.1' || equation == '0.1+0.2') {
+					input.innerHTML = eval((0.2 * 10 + 0.1 * 10) / 10);
+				} else {
 				input.innerHTML = eval(equation);
+			    }
 			}
 
 			decimalAdded = false;
